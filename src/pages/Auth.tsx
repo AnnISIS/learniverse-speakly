@@ -27,22 +27,22 @@ const Auth = () => {
       if (isLogin) {
         await login(email, password);
         toast({
-          title: "Welcome back!",
-          description: "You've successfully logged in.",
+          title: "欢迎回来！",
+          description: "您已成功登录。",
         });
       } else {
         await register(name, email, password);
         toast({
-          title: "Account created!",
-          description: "Your account has been successfully created.",
+          title: "账号已创建！",
+          description: "您的账号已成功创建。",
         });
       }
       
       navigate("/proficiency");
     } catch (error) {
       toast({
-        title: "Error",
-        description: "An error occurred. Please try again.",
+        title: "错误",
+        description: "发生错误。请重试。",
         variant: "destructive",
       });
     } finally {
@@ -65,22 +65,22 @@ const Auth = () => {
         <GlassCard className="w-full">
           <div className="mb-6 text-center">
             <h1 className="text-2xl font-bold mb-2">
-              {isLogin ? "Welcome Back" : "Create an Account"}
+              {isLogin ? "欢迎回来" : "创建账号"}
             </h1>
             <p className="text-muted-foreground">
               {isLogin
-                ? "Enter your credentials to access your account"
-                : "Start your personalized English learning journey"}
+                ? "输入您的凭据以访问您的账号"
+                : "开始您的个性化英语学习之旅"}
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             {!isLogin && (
               <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name">姓名</Label>
                 <Input
                   id="name"
-                  placeholder="Enter your name"
+                  placeholder="输入您的姓名"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -89,11 +89,11 @@ const Auth = () => {
             )}
 
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">邮箱</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder="输入您的邮箱"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -101,11 +101,11 @@ const Auth = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">密码</Label>
               <Input
                 id="password"
                 type="password"
-                placeholder="Enter your password"
+                placeholder="输入您的密码"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -140,25 +140,25 @@ const Auth = () => {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
                   </svg>
-                  <span>Processing...</span>
+                  <span>处理中...</span>
                 </div>
               ) : isLogin ? (
-                "Login"
+                "登录"
               ) : (
-                "Sign Up"
+                "注册"
               )}
             </Button>
           </form>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-muted-foreground">
-              {isLogin ? "Don't have an account?" : "Already have an account?"}
+              {isLogin ? "没有账号？" : "已有账号？"}
               <button
                 type="button"
                 onClick={() => setIsLogin(!isLogin)}
                 className="ml-1 text-primary hover:underline focus:outline-none"
               >
-                {isLogin ? "Sign Up" : "Login"}
+                {isLogin ? "注册" : "登录"}
               </button>
             </p>
           </div>

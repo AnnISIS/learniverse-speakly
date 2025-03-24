@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
-        {/* Hero Section */}
+        {/* 英雄区域 */}
         <section className="relative pt-20 md:pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 -z-10" />
           <div className="absolute top-1/4 left-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 -z-10" />
@@ -31,10 +31,10 @@ const Index = () => {
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   <span className="inline-block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    Master English
+                    掌握英语
                   </span>
                   <br />
-                  <span>With Personalized AI Learning</span>
+                  <span>通过个性化AI学习</span>
                 </h1>
               </motion.div>
               
@@ -44,7 +44,7 @@ const Index = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-lg md:text-xl text-muted-foreground max-w-2xl"
               >
-                Speakly uses AI to create a personalized learning experience tailored to your needs, goals, and current proficiency level.
+                说学利用AI创建个性化学习体验，根据您的需求、目标和当前熟练程度量身定制。
               </motion.p>
               
               <motion.div
@@ -55,86 +55,86 @@ const Index = () => {
               >
                 <Link to={user ? "/dashboard" : "/auth"}>
                   <Button size="lg" className="h-12 px-8 text-base button-hover">
-                    {user ? "Go to Dashboard" : "Start Learning"}
+                    {user ? "前往仪表盘" : "开始学习"}
                   </Button>
                 </Link>
                 <Button size="lg" variant="outline" className="h-12 px-8 text-base button-hover">
-                  Learn More
+                  了解更多
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* 特点部分 */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Speakly?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">为什么选择说学？</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Our AI-powered platform adapts to your learning style and needs
+                我们的AI驱动平台适应您的学习方式和需求
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <FeatureCard 
-                title="Personalized Learning" 
-                description="Adaptive learning paths based on your proficiency level and goals"
+                title="个性化学习" 
+                description="基于您的熟练程度和目标的自适应学习路径"
                 delay={0.1}
               />
               <FeatureCard 
-                title="Interactive Exercises" 
-                description="Engaging activities to practice vocabulary, grammar, speaking and listening"
+                title="互动练习" 
+                description="参与词汇、语法、口语和听力的互动活动"
                 delay={0.2}
               />
               <FeatureCard 
-                title="Progress Tracking" 
-                description="Detailed analytics and reports to monitor your improvement"
+                title="进度追踪" 
+                description="详细的分析和报告以监控您的提升"
                 delay={0.3}
               />
               <FeatureCard 
-                title="AI Conversation" 
-                description="Practice speaking with our advanced AI conversation partner"
+                title="AI对话" 
+                description="与我们的先进AI对话伙伴练习口语"
                 delay={0.4}
               />
             </div>
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* 工作原理 */}
         <section className="py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">如何使用</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Getting started is easy and takes just a few minutes
+                开始使用非常简单，只需几分钟
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <StepCard 
                 number="1" 
-                title="Take the Assessment" 
-                description="Complete a short proficiency test to determine your current level"
+                title="参加评估" 
+                description="完成简短的熟练度测试，确定您当前的水平"
                 delay={0.1}
               />
               <StepCard 
                 number="2" 
-                title="Get Your Plan" 
-                description="Receive a personalized learning plan tailored to your needs"
+                title="获取计划" 
+                description="接收根据您的需求量身定制的个性化学习计划"
                 delay={0.2}
               />
               <StepCard 
                 number="3" 
-                title="Start Learning" 
-                description="Begin your daily lessons and track your progress"
+                title="开始学习" 
+                description="开始您的每日课程并跟踪您的进度"
                 delay={0.3}
               />
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA部分 */}
         <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
           <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 -z-10" />
           <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent/20 rounded-full blur-[100px] -z-10" />
@@ -142,13 +142,13 @@ const Index = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center">
               <GlassCard className="p-8 md:p-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Improve Your English?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">准备提高您的英语水平？</h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Start your personalized English learning journey today and see the difference.
+                  今天就开始您的个性化英语学习之旅，见证不同。
                 </p>
                 <Link to={user ? "/dashboard" : "/auth"}>
                   <Button size="lg" className="h-12 px-8 text-base button-hover">
-                    {user ? "Go to Dashboard" : "Get Started for Free"}
+                    {user ? "前往仪表盘" : "免费开始使用"}
                   </Button>
                 </Link>
               </GlassCard>

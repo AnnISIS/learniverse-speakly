@@ -16,11 +16,11 @@ const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleSaveProfile = () => {
-    // In a real app, this would update the user profile via API
+    // 在实际应用中，这将通过API更新用户资料
     setIsEditing(false);
     toast({
-      title: "Profile updated",
-      description: "Your profile has been successfully updated.",
+      title: "资料已更新",
+      description: "您的个人资料已成功更新。",
     });
   };
 
@@ -28,9 +28,9 @@ const Profile = () => {
     <div className="min-h-screen pt-20 pb-10">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Your Profile</h1>
+          <h1 className="text-3xl font-bold mb-2">您的个人资料</h1>
           <p className="text-muted-foreground">
-            View and manage your profile settings
+            查看并管理您的个人资料设置
           </p>
         </div>
 
@@ -63,8 +63,8 @@ const Profile = () => {
                   <p className="text-muted-foreground mb-4">{user?.email}</p>
                   
                   <div className="w-full">
-                    <p className="text-sm font-medium mb-1">Proficiency Level</p>
-                    <p className="bg-muted/40 py-2 px-4 rounded-md">{user?.level || "Beginner"}</p>
+                    <p className="text-sm font-medium mb-1">熟练度级别</p>
+                    <p className="bg-muted/40 py-2 px-4 rounded-md">{user?.level || "初学者"}</p>
                   </div>
                 </div>
               </GlassCard>
@@ -79,24 +79,24 @@ const Profile = () => {
             >
               <GlassCard>
                 <div className="flex justify-between items-center mb-6">
-                  <h2 className="text-xl font-semibold">Personal Information</h2>
+                  <h2 className="text-xl font-semibold">个人信息</h2>
                   {!isEditing ? (
                     <Button variant="outline" onClick={() => setIsEditing(true)}>
-                      Edit Profile
+                      编辑资料
                     </Button>
                   ) : (
                     <div className="flex space-x-2">
                       <Button variant="outline" onClick={() => setIsEditing(false)}>
-                        Cancel
+                        取消
                       </Button>
-                      <Button onClick={handleSaveProfile}>Save</Button>
+                      <Button onClick={handleSaveProfile}>保存</Button>
                     </div>
                   )}
                 </div>
 
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">姓名</Label>
                     <Input
                       id="name"
                       value={name}
@@ -105,7 +105,7 @@ const Profile = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">邮箱</Label>
                     <Input
                       id="email"
                       type="email"
@@ -125,40 +125,40 @@ const Profile = () => {
               className="mt-6"
             >
               <GlassCard>
-                <h2 className="text-xl font-semibold mb-6">Learning Preferences</h2>
+                <h2 className="text-xl font-semibold mb-6">学习偏好</h2>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-4 bg-muted/30 rounded-lg">
                     <div>
-                      <h3 className="font-medium mb-1">Daily Goal</h3>
+                      <h3 className="font-medium mb-1">每日目标</h3>
                       <p className="text-sm text-muted-foreground">
-                        Minutes of learning per day
+                        每天学习分钟数
                       </p>
                     </div>
-                    <div className="text-xl font-bold">30 min</div>
+                    <div className="text-xl font-bold">30 分钟</div>
                   </div>
                   
                   <div className="flex justify-between items-center p-4 bg-muted/30 rounded-lg">
                     <div>
-                      <h3 className="font-medium mb-1">Learning Focus</h3>
+                      <h3 className="font-medium mb-1">学习重点</h3>
                       <p className="text-sm text-muted-foreground">
-                        Your primary learning objective
+                        您的主要学习目标
                       </p>
                     </div>
-                    <div className="text-primary font-medium">Speaking</div>
+                    <div className="text-primary font-medium">口语</div>
                   </div>
                   
                   <div className="flex justify-between items-center p-4 bg-muted/30 rounded-lg">
                     <div>
-                      <h3 className="font-medium mb-1">Notification Preferences</h3>
+                      <h3 className="font-medium mb-1">通知偏好</h3>
                       <p className="text-sm text-muted-foreground">
-                        Daily reminders and updates
+                        每日提醒和更新
                       </p>
                     </div>
-                    <div className="text-primary font-medium">Enabled</div>
+                    <div className="text-primary font-medium">已启用</div>
                   </div>
 
                   <Button variant="outline" className="w-full">
-                    Update Preferences
+                    更新偏好
                   </Button>
                 </div>
               </GlassCard>
@@ -172,18 +172,18 @@ const Profile = () => {
           transition={{ duration: 0.3, delay: 0.3 }}
         >
           <GlassCard>
-            <h2 className="text-xl font-semibold mb-6">Account Settings</h2>
+            <h2 className="text-xl font-semibold mb-6">账号设置</h2>
             <div className="space-y-4">
               <Button variant="outline" className="w-full justify-start text-left">
-                Change Password
+                修改密码
               </Button>
               
               <Button variant="outline" className="w-full justify-start text-left">
-                Notification Settings
+                通知设置
               </Button>
               
               <Button variant="outline" className="w-full justify-start text-left">
-                Privacy Settings
+                隐私设置
               </Button>
               
               <Button 
@@ -191,7 +191,7 @@ const Profile = () => {
                 className="w-full mt-4"
                 onClick={logout}
               >
-                Log Out
+                退出登录
               </Button>
             </div>
           </GlassCard>

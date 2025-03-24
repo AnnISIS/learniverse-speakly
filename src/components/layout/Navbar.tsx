@@ -21,9 +21,9 @@ const Navbar = () => {
   }, []);
 
   const navLinks = user ? [
-    { name: "Dashboard", path: "/dashboard" },
-    { name: "Learning", path: "/learning" },
-    { name: "Profile", path: "/profile" },
+    { name: "仪表盘", path: "/dashboard" },
+    { name: "学习", path: "/learning" },
+    { name: "个人资料", path: "/profile" },
   ] : [];
 
   const isActive = (path: string) => location.pathname === path;
@@ -42,11 +42,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Speakly
+              说学
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* 桌面导航 */}
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
@@ -59,16 +59,16 @@ const Navbar = () => {
             ))}
             {user ? (
               <Button variant="ghost" onClick={logout} className="ml-2">
-                Log Out
+                退出登录
               </Button>
             ) : (
               <Link to="/auth">
-                <Button className="ml-2 button-hover">Get Started</Button>
+                <Button className="ml-2 button-hover">开始使用</Button>
               </Link>
             )}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* 移动菜单按钮 */}
           <button
             className="md:hidden p-2 rounded-md text-foreground"
             onClick={toggleMobileMenu}
@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* 移动菜单 */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background/90 backdrop-blur-md animate-fade-in">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
@@ -109,11 +109,11 @@ const Navbar = () => {
                 }}
                 className="justify-start px-4"
               >
-                Log Out
+                退出登录
               </Button>
             ) : (
               <Link to="/auth" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full">开始使用</Button>
               </Link>
             )}
           </div>

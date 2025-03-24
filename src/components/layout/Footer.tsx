@@ -9,38 +9,38 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Speakly
+                说学
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Personalized AI-powered English learning platform helping you achieve fluency through adaptive learning.
+              个性化AI驱动的英语学习平台，通过自适应学习帮助您达到流利水平。
             </p>
           </div>
           
           <div>
-            <h3 className="font-medium text-foreground mb-4">Features</h3>
+            <h3 className="font-medium text-foreground mb-4">功能</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="#" className="hover:text-primary transition-colors">Personalized Learning</Link></li>
-              <li><Link to="#" className="hover:text-primary transition-colors">Interactive Exercises</Link></li>
-              <li><Link to="#" className="hover:text-primary transition-colors">Progress Tracking</Link></li>
-              <li><Link to="#" className="hover:text-primary transition-colors">Speaking Practice</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">个性化学习</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">互动练习</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">进度追踪</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">口语练习</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-medium text-foreground mb-4">Resources</h3>
+            <h3 className="font-medium text-foreground mb-4">资源</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="#" className="hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link to="#" className="hover:text-primary transition-colors">Help Center</Link></li>
-              <li><Link to="#" className="hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link to="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">博客</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">帮助中心</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">联系我们</Link></li>
+              <li><Link to="#" className="hover:text-primary transition-colors">隐私政策</Link></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-border mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Speakly. All rights reserved.
+            © {new Date().getFullYear()} 说学. 保留所有权利.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
