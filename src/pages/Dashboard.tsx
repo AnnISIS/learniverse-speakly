@@ -15,57 +15,57 @@ const Dashboard = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Sample learning data
+  // 示例学习数据
   const learningData = {
     streak: 3,
     totalMinutes: 120,
     completedLessons: 8,
     totalLessons: 30,
     progress: (8 / 30) * 100,
-    nextLesson: "Phrasal Verbs in Daily Conversations",
+    nextLesson: "日常对话中的短语动词",
     dailyGoal: 80,
     dailyProgress: 65,
     recentActivities: [
       {
         id: 1,
-        type: "vocabulary",
-        title: "Essential Travel Vocabulary",
-        date: "Today",
+        type: "词汇",
+        title: "基本旅行词汇",
+        date: "今天",
         score: 85,
       },
       {
         id: 2,
-        type: "grammar",
-        title: "Past Perfect Tense",
-        date: "Yesterday",
+        type: "语法",
+        title: "过去完成时",
+        date: "昨天",
         score: 92,
       },
       {
         id: 3,
-        type: "listening",
-        title: "Understanding Native Speakers",
-        date: "2 days ago",
+        type: "听力",
+        title: "理解母语人士",
+        date: "2天前",
         score: 78,
       },
     ],
     recommendedActivities: [
       {
         id: 1,
-        type: "vocabulary",
-        title: "Business English Terms",
-        duration: "15 min",
+        type: "词汇",
+        title: "商务英语术语",
+        duration: "15分钟",
       },
       {
         id: 2,
-        type: "grammar",
-        title: "Conditional Sentences",
-        duration: "20 min",
+        type: "语法",
+        title: "条件句",
+        duration: "20分钟",
       },
       {
         id: 3,
-        type: "speaking",
-        title: "Job Interview Practice",
-        duration: "25 min",
+        type: "口语",
+        title: "面试练习",
+        duration: "25分钟",
       },
     ],
   };
@@ -75,10 +75,10 @@ const Dashboard = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">
-            Welcome back, {user?.name || "Learner"}!
+            欢迎回来，{user?.name || "学习者"}！
           </h1>
           <p className="text-muted-foreground">
-            Your learning adventure continues. Here's your current progress.
+            您的学习冒险继续。这是您目前的进度。
           </p>
         </div>
 
@@ -91,13 +91,13 @@ const Dashboard = () => {
             >
               <GlassCard>
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-semibold">Learning Progress</h2>
-                  <span className="text-sm text-muted-foreground">Level: {user?.level || "Beginner"}</span>
+                  <h2 className="text-xl font-semibold">学习进度</h2>
+                  <span className="text-sm text-muted-foreground">等级：{user?.level || "初学者"}</span>
                 </div>
 
                 <div className="mb-6">
                   <div className="flex justify-between mb-2">
-                    <span className="text-sm text-muted-foreground">Overall Course Progress</span>
+                    <span className="text-sm text-muted-foreground">整体课程进度</span>
                     <span className="text-sm font-medium">{Math.round(learningData.progress)}%</span>
                   </div>
                   <Progress value={learningData.progress} className="h-2" />
@@ -107,22 +107,22 @@ const Dashboard = () => {
                   <StatCard
                     icon={<Clock className="h-5 w-5 text-primary" />}
                     value={learningData.totalMinutes}
-                    label="Minutes Learned"
+                    label="学习分钟数"
                   />
                   <StatCard
                     icon={<BookOpen className="h-5 w-5 text-primary" />}
                     value={learningData.completedLessons}
-                    label="Lessons Completed"
+                    label="已完成课程"
                   />
                   <StatCard
                     icon={<Calendar className="h-5 w-5 text-primary" />}
                     value={learningData.streak}
-                    label="Day Streak"
+                    label="连续学习天数"
                   />
                   <StatCard
                     icon={<User className="h-5 w-5 text-primary" />}
                     value={Math.round(learningData.dailyProgress)}
-                    label="Daily Goal"
+                    label="每日目标"
                     isPercentage
                   />
                 </div>
@@ -136,7 +136,7 @@ const Dashboard = () => {
             transition={{ duration: 0.3, delay: 0.1 }}
           >
             <GlassCard className="h-full">
-              <h2 className="text-xl font-semibold mb-4">Daily Goal</h2>
+              <h2 className="text-xl font-semibold mb-4">每日目标</h2>
               <div className="flex flex-col items-center">
                 <div className="relative h-40 w-40 mb-4">
                   <svg className="h-full w-full" viewBox="0 0 100 100">
@@ -176,10 +176,10 @@ const Dashboard = () => {
                   </svg>
                 </div>
                 <p className="text-center text-muted-foreground mb-4">
-                  You're making good progress! Complete your daily goal to maintain your streak.
+                  你进步很快！完成每日目标以保持你的学习连续性。
                 </p>
                 <Link to="/learning">
-                  <Button className="w-full button-hover">Continue Learning</Button>
+                  <Button className="w-full button-hover">继续学习</Button>
                 </Link>
               </div>
             </GlassCard>
@@ -194,7 +194,7 @@ const Dashboard = () => {
             className="lg:col-span-2"
           >
             <GlassCard>
-              <h2 className="text-xl font-semibold mb-4">Recent Activities</h2>
+              <h2 className="text-xl font-semibold mb-4">最近活动</h2>
               <div className="space-y-4">
                 {learningData.recentActivities.map((activity) => (
                   <div
@@ -212,14 +212,14 @@ const Dashboard = () => {
                     </div>
                     <div className="text-right">
                       <div className="font-semibold">{activity.score}%</div>
-                      <div className="text-xs text-muted-foreground">Score</div>
+                      <div className="text-xs text-muted-foreground">得分</div>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="mt-4">
                 <Button variant="outline" className="w-full button-hover">
-                  View All Activities
+                  查看所有活动
                 </Button>
               </div>
             </GlassCard>
@@ -231,7 +231,7 @@ const Dashboard = () => {
             transition={{ duration: 0.3, delay: 0.3 }}
           >
             <GlassCard>
-              <h2 className="text-xl font-semibold mb-4">Recommended For You</h2>
+              <h2 className="text-xl font-semibold mb-4">为您推荐</h2>
               <div className="space-y-3">
                 {learningData.recommendedActivities.map((activity) => (
                   <Link
@@ -251,7 +251,7 @@ const Dashboard = () => {
               </div>
               <div className="mt-4">
                 <Button variant="outline" className="w-full button-hover">
-                  View All Recommendations
+                  查看所有推荐
                 </Button>
               </div>
             </GlassCard>
@@ -266,15 +266,15 @@ const Dashboard = () => {
           <GlassCard>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <div className="mb-4 md:mb-0">
-                <h2 className="text-xl font-semibold mb-1">Next Lesson</h2>
+                <h2 className="text-xl font-semibold mb-1">下一课</h2>
                 <p className="text-muted-foreground">
-                  Continue your learning journey
+                  继续您的学习旅程
                 </p>
               </div>
               <div className="flex flex-col md:items-end">
                 <h3 className="font-medium mb-2">{learningData.nextLesson}</h3>
                 <Link to="/learning">
-                  <Button className="w-full md:w-auto button-hover">Start Lesson</Button>
+                  <Button className="w-full md:w-auto button-hover">开始课程</Button>
                 </Link>
               </div>
             </div>
